@@ -1,0 +1,490 @@
+@font-face {
+    font-family: 'Ledger';
+    src: url('../Font/Ledger/Ledger-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+
+}
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../Font/Cinzel_Decorative/CinzelDecorative-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 1px solid #cac9c9;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    height: 140px;
+}
+.languages {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    margin-left: auto;
+    right: 5px;
+    
+}
+.languages li {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 12px;
+    padding-top: 10px;
+    padding-right: 5px;
+}
+.Title h1 {
+        font-size: 45px;
+        color: #000000;
+        text-align: center;
+        margin: 0   ;
+        font-family: 'Cinzel';
+        font-weight: 500;
+        letter-spacing: -4px ;
+        transition: scale 0.3s;
+     }
+.Title h2 {
+        font-size: 20px;
+        color: #000000;
+        text-align: center;
+        margin-top: -3px;
+        font-family: 'Cinzel';
+        font-weight: 500;
+        margin-bottom: 30px;
+        cursor: default;
+    }
+
+.homepage-link {
+    text-decoration: none;
+    
+    border-bottom: none;
+    font-size: 45px;
+}
+.homepage-link a {
+    transition: scale 0.3s;
+}
+.Title h1:hover {
+    scale: 1.2;
+}
+.homepage-link:hover {
+    scale: 1.2;
+    
+}
+a {
+        transition: all 0.3s;
+        letter-spacing: 2px;
+    }
+.hover-enlarge {
+        transition: all 0.3s;
+    }    
+
+    
+
+.languages li a{
+   text-decoration: none;
+   color: #e7e7e7;
+   transition: color 0.3s;
+}
+.languages li a:hover {
+    color: #000;
+}
+   .languages li:not(:last-child)::after {
+    content: "/";
+    color: #e7e7e7;
+    margin: 0 5px;    
+    
+}
+nav a.site-logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    scale: 0.45;
+    margin-bottom: -20px;
+    margin-top: -30px;
+    transition: scale 0.5s;
+    
+}
+nav a.site-logo:hover {
+    scale: 0.5;
+   
+}
+nav ul.links {
+    display: flex;
+    width: 100%;
+    justify-content: space-around; 
+}
+nav ul.links li {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;  
+    color: #cac9c9;
+    font-size: 14px;
+    padding: 0px 2px;
+    
+    
+}
+nav ul.links li a:hover {
+    
+    color: #000;
+    border-bottom: #000 1px solid;
+    
+}
+
+nav ul.links li a {
+    text-decoration: none;
+    color: #cac9c9;
+    border-bottom: #fff 1px solid;
+   font-family: "Cinzel";
+     
+    transition: color 0.3s;
+    transition: border-bottom 0.3s;
+    
+     
+}
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    nav ul.links li {
+        font-size: 12px; /* Smaller font size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul.links li {
+        font-size: 10px; /* Even smaller font size for mobile devices */
+    }
+}
+/* ##########Banner End############################################################ */
+/* ##########Footer Start############################################################ */
+footer {
+    background-color: #fff;
+    border-top: 1px solid #cac9c9;
+    position: static;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    z-index: 999;
+}
+
+footer section.rights {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    white-space: nowrap;
+    font-size: 10px;
+    color: #cac9c9;
+    
+    flex-grow: 1;
+}
+footer section.rights p {
+    transition: color 0.3s;
+}
+footer section.rights p:hover {
+    margin-right: 10px;
+    color: #000;
+}
+
+footer section.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    white-space: nowrap;
+    
+}
+
+footer section.social-links li{
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px; /* Space between social icons */
+}
+
+footer section.social-links li img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+footer section.social-links li img.facebook {
+    width: 30px;
+    height: 30px;
+    content: url('../images/Facebook\ Logo\ Unhover.png');
+    transition: all 0.3s ease;
+}
+
+footer section.social-links li img.facebook:hover {
+    transform: scale(1.1);
+    content: url('../images/Facebook\ Logo\ Hover.png');
+}
+footer section.social-links li img.instagram {
+    width: 30px;
+    height: 30px;
+    content: url('../images/Instagram\ Logo\ Unhover.png');
+    transition: all 0.3s ease;
+}
+
+footer section.social-links li img.instagram:hover {
+    transform: scale(1.1);
+    content: url('../images/Instagram\ Logo\ Hover.png');
+}
+footer section.social-links li img.whatsapp {
+    width: 30px;
+    height: 30px;
+    content: url('../images/Whatsapp\ Logo\ Unhover.png');
+    transition: all 0.3s ease;
+}
+
+footer section.social-links li img.whatsapp:hover {
+    transform: scale(1.1);
+    content: url('../images/Whatsapp\ Logo\ Hover.png');
+}
+
+/* Main CSS ############################################################################################################*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    
+}
+
+.portfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 160px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    text-align: center;
+    overflow: hidden;
+    
+}
+
+.zoom-container {
+    position: relative;
+    display: inline-block;
+}
+
+#modal-img {
+    max-width: 100%;
+    max-height: 100%;
+    cursor: none;
+    border: 1px solid rgba(180, 180, 180, 0.25);
+    border-radius: 25px;
+
+    
+}
+@media (min-width: 768px) {
+    #modal-img {
+        position: relative;
+        
+        
+    }
+}
+@media (max-width: 768px) {
+    #modal-img {
+        position: relative;
+      
+        
+    }
+    .gallery-item img {
+        height: 250px;
+    }
+    .modal-content {
+        flex-direction: column!important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px!important;
+    }
+    .modal-content #modal-img {
+        display: flex;
+        position: relative;
+        justify-content: center!important;
+        align-items: center!important;
+        flex-direction: column!important;
+        width: 100%;
+        
+        margin: 0;
+    }
+    .modal-text {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        top: 40px;
+    }
+}
+
+/* Magnifier circle */
+.magnifier {
+    position: absolute;
+    width: 200px;  /* Adjust size as needed */
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid white;
+    overflow: hidden;
+    pointer-events: none;  /* Allows clicking through the magnifier */
+    display: none;
+    background-repeat: no-repeat;
+    background-size: 700%;
+}
+
+/* Zoomed-in image effect */
+#modal-img.zoomed {
+    transform: scale(2);  /* Adjust zoom scale as needed */
+}
+
+#modal-description {
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    text-align: justify;
+    font-family: 'Ledger';
+}
+#modal-title {
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: #fff 1px solid;
+    font-weight: 300;
+    font-family: "Cinzel";
+    margin-bottom: 50px;
+
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: #f1f1f1;
+}
+.modal-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 80%;
+    height: 80%;
+    margin: 0;
+    
+    padding: 20px;
+    background: rgba(180, 180, 180, 0.43);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.7px);
+    -webkit-backdrop-filter: blur(1.7px);
+    border: 1px solid rgba(180, 180, 180, 0.25);
+}
+.modal-content #modal-img {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    
+    margin: 0;
+}
+.modal-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    margin: 0;
+}
+@keyframes floatIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+.gallery-item {
+    opacity: 0;
+    animation: floatIn 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    animation-delay: 1s; /* Adds 1 second delay before animation starts */
+}
+
+/* If you want to keep the staggered effect, add 1s to each delay */
+.gallery-item:nth-child(1) { animation-delay: 1.1s; }
+.gallery-item:nth-child(2) { animation-delay: 1.1s; }
+.gallery-item:nth-child(3) { animation-delay: 1.1s; }
+.gallery-item:nth-child(4) { animation-delay: 1.3s; }
+.gallery-item:nth-child(5) { animation-delay: 1.3s; }
+.gallery-item:nth-child(6) { animation-delay: 1.3s; }
+.gallery-item:nth-child(7) { animation-delay: 1.5s; }
+.gallery-item:nth-child(8) { animation-delay: 1.5s; }
+.gallery-item:nth-child(9) { animation-delay: 1.5s; }
+
+/* Alternative shorthand syntax */
+.gallery-item {
+    opacity: 0;
+    animation: floatIn 1s cubic-bezier(0.23, 1, 0.32, 1) 1s forwards;
+    /* Format: name duration timing-function delay fill-mode */
+}
