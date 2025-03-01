@@ -218,10 +218,33 @@ body.fade-out .nav-links a {
 
 a:hover {
     scale: 1.1;
-    border-bottom: #ffffff 1px solid;
+    border-bottom: #000000 1px solid;
     margin-top: 30px;
+    color: #000000;
+}
+a:hover + .Title h1 {
+    background-image: none !important;
+    color: #000000;
+    animation: change none;
 }
 
 .hover-enlarge:hover {
     scale: 1.1;
+}
+
+/* First, ensure the transitions are smooth */
+body, .Title h1, .Title h2 {
+    transition: all 0.3s ease;
+}
+
+/* Create styles for when hovering over any a tag */
+body:has(a:hover) {
+    background-image: none !important;
+    background-color: white !important;
+    animation-play-state: paused;
+}
+
+body:has(a:hover) .Title h1,
+body:has(a:hover) .Title h2 {
+    color: black !important;
 }
