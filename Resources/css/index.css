@@ -109,40 +109,40 @@ a {
     } 
     @keyframes change {
         0% {
-            background-image: url('../images/portfolio-photos/background/1.JPEG');
+            background-image: url('../images/portfolio-photos/background/1-mobile.jpg');
             background-position: 50% 30%;
-            background-size: 768px auto;
+            background-size: auto 100%;
             
         }
         16.67% {
-            background-image: url('../images/portfolio-photos/background/2.JPEG');
+            background-image: url('../images/portfolio-photos/background/2-mobile.jpg');
             background-position: 50% 20%;
-            background-size: 768px auto;
+            background-size: auto 100%;
         }
         33.34% {
-            background-image: url('../images/portfolio-photos/background/3.JPEG');
+            background-image: url('../images/portfolio-photos/background/3-mobile.jpg');
             background-position: 50% 30%;
-            background-size: 768px auto;
+            background-size: auto 100%;
         }
         50% {
-            background-image: url('../images/portfolio-photos/background/4.JPEG');
+            background-image: url('../images/portfolio-photos/background/4-mobile.jpg');
             background-position: 50% 20%;
-            background-size: 768px auto;
+            background-size: auto 100%;
         }
         66.67% {
-            background-image: url('../images/portfolio-photos/background/5.JPEG');
+            background-image: url('../images/portfolio-photos/background/5-mobile.jpg');
             background-position: 50% 20%;
-            background-size: 768px auto;
+            background-size: auto 100%;
         }
         83.34% {
-            background-image: url('../images/portfolio-photos/background/6.JPEG');
+            background-image: url('../images/portfolio-photos/background/6-mobile.jpg');
             background-position: 50% 20%;
-            background-size: 768px auto;
+            background-size: auto 100%;
         }
         100% {
-            background-image: url('../images/portfolio-photos/background/1.JPEG');
+            background-image: url('../images/portfolio-photos/background/1-mobile.jpg');
             background-position: 50% 30%;
-            background-size: 768px auto;
+            background-size: auto 100%;
         }
     }  
 }
