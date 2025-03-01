@@ -1,0 +1,188 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Ledger';
+    src: url('../Font/Ledger/Ledger-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+
+}
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../Font/Cinzel_Decorative/CinzelDecorative-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+
+}
+.unselectable {
+    -webkit-user-select: none;  /* Safari */
+    -moz-user-select: none;     /* Firefox */
+    -ms-user-select: none;      /* IE10+/Edge */
+    user-select: none;          /* Standard */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('/Resources/images/portfolio-photos/background/_DSC5422\ 1.JPEG');
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* This keeps the background fixed while scrolling */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    animation: change 40s infinite ease-in-out;
+}
+
+.Title {
+    position: absolute;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    top: 35%;
+}
+.Title h1 {
+    font-size: 100px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0   ;
+    font-family: 'Cinzel';
+    font-weight: 500;
+    letter-spacing: -4px ;
+}
+.Title h2 {
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: -20px   ;
+    font-family: 'Cinzel';
+    font-weight: 500;
+}
+a {
+    transition: all 0.3s;
+    letter-spacing: 2px;
+}
+.hover-enlarge {
+    transition: all 0.3s;
+}
+
+
+/* Hamburger Button Styles */
+
+.PC , .Mobile {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "cinzel";
+    margin-top: 40px;
+}
+
+
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('/Resources/images/portfolio-photos/background/_DSC5422\ 1.JPEG');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* This keeps the background fixed while scrolling */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    }
+
+    .PC {
+        display: none;
+    }   
+}
+
+/* Additional fix for mobile viewport height */
+html {
+    height: -webkit-fill-available;
+}
+@media screen and (min-width: 769px) {
+ 
+    .Mobile {
+        display: none;
+    }
+   
+}
+
+
+
+
+@keyframes change {
+    0% {
+        background-image: url('/Resources/images/portfolio-photos/background/_DSC5422\ 1.JPEG');
+        background-position: 50% 30%;
+    }
+    16.67% {
+        background-image: url('/Resources/images/portfolio-photos/background/Camila\ Mia253827\ 1.JPEG');
+        background-position: 50% 20%;
+    }
+    33.34% {
+        background-image: url('/Resources/images/portfolio-photos/background/ELSA\ WILD184005\ 1.JPEG');
+        background-position: 50% 30%;
+    }
+    50% {
+        background-image: url('/Resources/images/portfolio-photos/background/IMG_8273.JPEG');
+        background-position: 50% 20%;
+    }
+    66.67% {
+        background-image: url('/Resources/images/portfolio-photos/background/IMG_8280.JPEG');
+        background-position: 50% 20%;
+    }
+    83.34% {
+        background-image: url('/Resources/images/portfolio-photos/background/Keziah\ 2024235561\ 1.JPEG');
+        background-position: 50% 20%;
+    }
+    100% {
+        background-image: url('/Resources/images/portfolio-photos/background/_DSC5422\ 1.JPEG');
+        background-position: 50% 30%;
+    }
+}
+
+/* CSS */
+/* Add this to your CSS */
+body {
+    transition: all 0.3s ease;
+}
+
+body.fade-out {
+    background-color: white !important; /* !important to override any existing background */
+    background-image: none !important; /* Remove the background image */
+}
+
+/* Ensure text also transitions */
+.Title h1, .Title h2, .nav-links a {
+    transition: color 0.3s ease;
+}
+
+body.fade-out .Title h1,
+body.fade-out .Title h2,
+body.fade-out .nav-links a {
+    color: black !important;
+}
+
+a:hover {
+    scale: 1.1;
+    border-bottom: #ffffff 1px solid;
+    margin-top: 30px;
+}
+
+.hover-enlarge:hover {
+    scale: 1.1;
+}

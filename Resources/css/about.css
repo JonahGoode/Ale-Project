@@ -1,0 +1,492 @@
+/* ###########IMPORTS#######################*/
+@font-face {
+    font-family: 'Ledger';
+    src: url('../Font/Ledger/Ledger-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+
+}
+
+
+
+
+/* ###########IMPORTS#######################*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    padding-top: 140px;
+    font-family: 'ledger',sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: #fafafa;
+    
+    
+    
+}
+/* ##########Banner Start############################################################ */
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 1px solid #cac9c9;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    height: 140px;
+}
+.languages {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    margin-left: auto;
+    right: 5px;
+    
+}
+.languages li {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 12px;
+    padding-top: 10px;
+    padding-right: 5px;
+    
+    
+    
+    
+}
+.languages li a{
+   text-decoration: none;
+   color: #cac9c9;
+   transition: color 0.3s;
+}
+.languages li a:hover {
+    color: #000;
+}
+   .languages li:not(:last-child)::after {
+    content: "/";
+    color: #cac9c9;
+    margin: 0 5px;    
+    
+}
+nav a.site-logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    scale: 0.45;
+    margin-bottom: -20px;
+    margin-top: -30px;
+    transition: scale 0.5s;
+    
+}
+nav a.site-logo:hover {
+    scale: 0.5;
+   
+}
+nav ul.links {
+    display: flex;
+    width: 100%;
+    justify-content: space-around; 
+}
+nav ul.links li {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;  
+    color: #cac9c9;
+    font-size: 14px;
+    padding: 0px 2px;
+    
+    
+}
+nav ul.links li a:hover {
+    
+    color: #000;
+    border-bottom: #000 1px solid;
+    
+}
+
+nav ul.links li a {
+    text-decoration: none;
+    color: #cac9c9;
+    border-bottom: #fff 1px solid;
+   
+     
+    transition: color 0.3s;
+    transition: border-bottom 0.3s;
+    
+     
+}
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    nav ul.links li {
+        font-size: 12px; /* Smaller font size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul.links li {
+        font-size: 10px; /* Even smaller font size for mobile devices */
+    }
+}
+/* ##########Banner End############################################################ */
+/* ##########Footer Start############################################################ */
+footer {
+    background-color: #fff;
+    border-top: 1px solid #cac9c9;
+    position: static;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+
+footer section.rights {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    white-space: nowrap;
+    font-size: 10px;
+    color: #cac9c9;
+    
+    flex-grow: 1;
+}
+footer section.rights p {
+    transition: color 0.3s;
+}
+footer section.rights p:hover {
+    margin-right: 10px;
+    color: #000;
+}
+
+footer section.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    white-space: nowrap;
+    
+}
+
+footer section.social-links li{
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px; /* Space between social icons */
+}
+
+footer section.social-links li img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+footer section.social-links li img.facebook {
+    width: 30px;
+    height: 30px;
+    content: url('../images/Facebook\ Logo\ Unhover.png');
+    transition: all 0.3s ease;
+}
+
+footer section.social-links li img.facebook:hover {
+    transform: scale(1.1);
+    content: url('../images/Facebook\ Logo\ Hover.png');
+}
+footer section.social-links li img.instagram {
+    width: 30px;
+    height: 30px;
+    content: url('../images/Instagram\ Logo\ Unhover.png');
+    transition: all 0.3s ease;
+}
+
+footer section.social-links li img.instagram:hover {
+    transform: scale(1.1);
+    content: url('../images/Instagram\ Logo\ Hover.png');
+}
+footer section.social-links li img.whatsapp {
+    width: 30px;
+    height: 30px;
+    content: url('../images/Whatsapp\ Logo\ Unhover.png');
+    transition: all 0.3s ease;
+}
+
+footer section.social-links li img.whatsapp:hover {
+    transform: scale(1.1);
+    content: url('../images/Whatsapp\ Logo\ Hover.png');
+}
+
+
+
+/* ##########Footer End############################################################ */
+/*###########main start############################################################ */
+section.about {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-top: 140px;
+    margin-bottom: 80px;
+    
+    background-color: #fff;
+    margin: 0 auto;
+    
+}
+section.about div.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-break: 1.5;
+    font-weight: 500;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: justify;
+    width: 50%;
+   
+}
+section.about div.text h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-break: 1.5;
+    font-weight: 700;
+    border-bottom: #000 1px solid;
+    margin: 20 auto;
+    text-align: justify;
+   
+}
+section.about div.text p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-break: 1.5;
+    font-weight: 500;
+    margin: 0 auto;
+    padding: 0 30px;
+    padding-top: 20px;
+    text-align: justify;}
+
+section.about div.image{
+    
+    margin: 0 auto;
+    overflow: hidden;
+   
+    width: 50%;
+    margin-right: 10px;
+    max-width: 655px;
+}
+section.about div.image img{
+    display: flex;
+    flex-direction: column;
+    width: 20px;
+    align-items: center;
+    justify-content: center;
+    filter: saturate(0);
+    
+    
+   
+    width: 100%;
+    margin: 0 auto;
+    transition: transform 1.5s;
+    overflow: hidden;
+}
+section.about div.image img:hover{
+    transform: scale(1.2);
+    overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+    section.about {
+        flex-direction: column; /* Stack elements vertically on mobile */
+        padding: 1rem;
+    }
+
+    section.about div.text {
+        width: 100%; /* Adjust text width for mobile */
+    }
+
+    section.about div.image {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .image-container {
+        width: 100%; /* Make container responsive */
+        max-width: 400px; /* Optional: limit maximum width */
+        margin: 0 auto;
+    }
+}
+
+.Notable-Clients {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+   
+    background:linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(29, 29, 29) 99%, rgba(255,255,255,0) 100%);
+    color: #fff;
+    margin: 0 auto;
+    padding: 20px;
+}
+.Notable-Clients h2 {
+    margin-top: -20px;
+    margin-bottom: 10px;
+    position: relative;
+    font-weight: 500;
+    
+}
+.clients {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: #fff;
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 40px;
+    overflow: hidden;
+    position: relative;
+    
+   
+}
+.client {
+    flex: 0 1 150px; /* Don't grow, can shrink, base width 150px */
+    min-width: 100px; /* Minimum size for logos */
+    max-width: 200px; /* Maximum size for logos */
+    margin: 0 80px; /* Space between logos */
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.client img{
+    display: flex;
+   width: 100%;
+   height: 50px;
+   max-width: 150px;
+   object-fit: contain;
+    align-items: center;
+    justify-content: space-around;
+    filter: invert(1);
+    opacity: 0.5;
+    width: 150px;
+    margin: 0 30px;
+    transition: opacity 0.2s;
+    flex-wrap: nowrap;
+   
+}
+.client img:hover{
+    
+    opacity: 1;
+    
+}
+.client-track {
+    display: flex;
+    animation: scroll 90s linear infinite; /* Adjust time to control speed */
+    width: fit-content; /* Allow content to determine width */
+    transition: all 0.5s ease;
+    gap: 60px;
+}
+
+/* Double the content for seamless loop */
+.client {
+    flex: 0 0 auto; /* Prevent growing/shrinking */
+    padding: 0 20px;
+}
+
+#eme img{
+scale: 3;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Move by half of the total width */
+    }
+}
+
+/* Optional: Pause animation on hover */
+.client-track:hover {
+    animation-play-state: paused;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .client {
+        flex: 0 1 120px; /* Slightly smaller on mobile */
+    }
+    .client-track {
+        gap: 10px; /* Reduce space between logos */
+    }
+ 
+}
+
+/* Media query for very small screens */
+@media screen and (max-width: 480px) {
+    .client {
+        flex: 0 1 100px; /* Even smaller on very small screens */
+    }
+}
+
+.Testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #000000;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+.Testimonials h2 {
+    margin-top: -20px;
+    margin-bottom: 30px;
+    position: relative;
+    font-weight: 500;
+    color: #fff;
+    border-bottom: #fff 1px solid;
+}
+.testimonials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin:  auto;
+    color: #fff;
+   flex-wrap: wrap;
+    width: 100%;
+    gap: 100px;
+    
+    position: relative;
+    
+   
+}
+.testimonial {
+   border: #fff 1px solid;
+    padding: 10px;
+    flex: 0 1 calc(33.333% - 70px); /* Set width to roughly one-third minus gap spacing */
+    min-width: 250px; /* Minimum width for each testimonial */
+    max-width: 400px; /* Maximum width for each testimonial */
+    transition: all 0.5s ease;
+}
+.testimonial:hover {
+    scale: 1.1;
+}  
+
+@media screen and (max-width: 768px) {
+    .testimonials {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 40px;
+    }
+
+}
