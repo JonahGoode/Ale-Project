@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", async function () {
     const gallery = document.querySelector(".gallery");
     const imageBaseUrl = "resource/images/portfolio-photos/Portfolio/"; // Ensure this is correct
-    const jsonUrl = "resource/data.json"; // Your JSON file path
+    const jsonUrl = "resource/data.JSON"; // Your JSON file path
     const maxAttempts = 1000; // Prevent excessive requests (adjust if needed)
     const imagesPerPage = 30; // Number of images to load per batch
 
