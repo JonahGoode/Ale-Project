@@ -237,12 +237,7 @@ body, .Title h1, .Title h2 {
     transition: all 0.3s ease;
 }
 
-/* Create styles for when hovering over any a tag */
-body:has(a:hover) {
-    background-image: none !important;
-    background-color: white !important;
-    animation-play-state: paused;
-}
+
 
 body:has(a:hover) .Title h1,
 body:has(a:hover) .Title h2 {
