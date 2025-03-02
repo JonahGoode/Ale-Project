@@ -1,0 +1,27 @@
+[
+  {
+    "filename": "1.JPEG",
+    "title": "Sunset Glow",
+    "description": "A breathtaking sunset over the ocean."
+  },
+  {
+    "filename": "2.JPEG",
+    "title": "Urban Lights",
+    "description": "City streets illuminated at night."
+  },
+  {
+    "filename": "3.JPEG",
+    "title": "Serene Landscape",
+    "description": "A peaceful valley with mountains in the background."
+  },
+  {
+    "filename": "4.JPEG",
+    "title": "Portrait in Shadows",
+    "description": "A dramatic portrait with deep contrast."
+  },
+  {
+    "filename": "5.JPEG",
+    "title": "Golden Hour",
+    "description": "Soft golden light hitting a field of flowers."
+  }
+]
