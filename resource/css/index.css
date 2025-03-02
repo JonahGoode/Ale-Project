@@ -64,13 +64,23 @@ body {
     font-size: 24px;
     color: #ffffff;
     text-align: center;
-    margin-top: -20px   ;
+    margin-top: -8px   ;
+    font-family: 'Cinzel';
+    font-weight: 500;
+}
+.Title h3 {
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
     font-family: 'Cinzel';
     font-weight: 500;
 }
 a {
     transition: all 0.3s;
     letter-spacing: 2px;
+    font-size: 10px;
+   
 }
 .hover-enlarge {
     transition: all 0.3s;
@@ -84,7 +94,7 @@ a {
     text-decoration: none;
     font-size: 14px;
     font-family: "cinzel";
-    margin-top: 40px;
+    margin-top: 200px;
 }
 
 
@@ -219,7 +229,7 @@ body.fade-out .nav-links a {
 a:hover {
     scale: 1.1;
     border-bottom: #000000 1px solid;
-    margin-top: 30px;
+    margin-top: 195px;
     color: #000000;
 }
 a:hover + .Title h1 {
@@ -233,13 +243,13 @@ a:hover + .Title h1 {
 }
 
 /* First, ensure the transitions are smooth */
-body, .Title h1, .Title h2 {
+body, .Title h1, .Title h2, .Title h3 {
     transition: all 0.3s ease;
 }
 
 
 
 body:has(a:hover) .Title h1,
-body:has(a:hover) .Title h2 {
+body:has(a:hover) .Title h2, body:has(a:hover) .Title h3 {
     color: black !important;
 }
