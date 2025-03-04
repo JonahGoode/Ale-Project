@@ -240,17 +240,7 @@ footer section.social-links li img.instagram:hover {
     transform: scale(1.1);
     content: url('../images/Instagram\ Logo\ Hover.png');
 }
-footer section.social-links li img.whatsapp {
-    width: 30px;
-    height: 30px;
-    content: url('../images/Whatsapp\ Logo\ Unhover.png');
-    transition: all 0.3s ease;
-}
 
-footer section.social-links li img.whatsapp:hover {
-    transform: scale(1.1);
-    content: url('../images/Whatsapp\ Logo\ Hover.png');
-}
 
 /* Main CSS ############################################################################################################*/
 * {
