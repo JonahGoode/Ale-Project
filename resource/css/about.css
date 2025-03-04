@@ -277,8 +277,8 @@ body {
     width: 80%;
     border: #cac9c9 3px solid;
     border-radius: 10px;
-    background-color: #080808;
-    color: #fff;
+    background-color: #cac9c98a;
+    color: #000;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     
@@ -292,7 +292,7 @@ overflow: hidden;
 }
 .about-image img {
     width: 100%;
-    border-radius: 10px;
+    
     transition: scale 1s;
    
     }
@@ -313,7 +313,7 @@ overflow: hidden;
 }
 
 .about-text h1 {
-    border-bottom: 2px #fff solid;
+    border-bottom: 2px #000000 solid;
     margin-bottom: 40px;
     font-size: 30px;
 }
