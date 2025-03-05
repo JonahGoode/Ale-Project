@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta class="active-bar" name="Theme-Color" content="#000000">
@@ -16,11 +16,11 @@
     <div class="hover-enlarge">
     <h1 class="unselectable">AC</h1>
     <h2 class="unselectable">Alejandra Cardenas</h2>
-    <h3 class="unselectable">international makeup artist</h3>
+    <h3 class="unselectable">Maquilladora Internacional</h3>
 
     </div>
-    <a href="portfolio_en.html" class="PC">Click Here To Enter</a>
-    <a href="portfolio_en.html" class="Mobile">Tap Here To Enter</a>
+    <a href="portfolio_en.html" class="PC">Haz clic aquí para ingresar</a>
+    <a href="portfolio_en.html" class="Mobile">Pulsa aquí para ingresar</a>
     </div>
 
 
@@ -33,7 +33,9 @@
         if (userLang.startsWith('es')) {
           window.location.href = 'index_es.html';
         }
-     
+        else if (userLang.startsWith('en')) {
+    window.location.href = 'index.html';
+  }
       </script>
 </body>
 </html>

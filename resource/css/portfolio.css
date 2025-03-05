@@ -14,6 +14,14 @@
 
 
 }
+@font-face {
+    font-family: 'Brawler';
+    src: url('../font/Brawler/Brawler-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+
+}
 
 nav {
     display: flex;
@@ -186,7 +194,7 @@ footer section.rights {
     white-space: nowrap;
     font-size: 10px;
     color: #cac9c9;
-    
+    font-family: "Brawler";
     flex-grow: 1;
 }
 footer section.rights p {
@@ -221,13 +229,13 @@ footer section.social-links li img {
 footer section.social-links li img.facebook {
     width: 30px;
     height: 30px;
-    content: url('../images/Facebook\ Logo\ Unhover.png');
+    content: url('../images/Mail\ unhover.png');
     transition: all 0.3s ease;
 }
 
 footer section.social-links li img.facebook:hover {
     transform: scale(1.1);
-    content: url('../images/Facebook\ Logo\ Hover.png');
+    content: url('../images/Mail\ hover.png');
 }
 footer section.social-links li img.instagram {
     width: 30px;
@@ -388,7 +396,7 @@ body {
     height: 80%;
     margin: 0 auto;
     text-align: justify;
-    font-family: 'Ledger';
+    font-family: 'Brawler';
 }
 #modal-title {
     color: white;
@@ -585,7 +593,7 @@ input[type=checkbox].bw-toggle-btn:hover {
     border: none;
     border-radius: 10px;
     transition: background-color 0.3s;
-    font-family: "Cinzel";
+    font-family: "Brawler";
 }
 
 .load-more-button:hover {
