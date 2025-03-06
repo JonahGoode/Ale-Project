@@ -502,7 +502,11 @@ font-size: 18px;
 
 .about-text {
     
-    text-align: justify;
+    text-align: left;
+}
+.about-text h1 {
+    
+    text-align: center;
 }
 .marquee-body {
     background-color: transparent;
