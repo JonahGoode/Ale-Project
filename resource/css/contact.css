@@ -424,11 +424,12 @@ background-position: center;
     .photo-slide {
         position: absolute;
         width: 100%;
-        animation: imagechange 20s ease-in-out infinite;
+        animation: none;
         height: 100%;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        background-image: url('/resource/images/portfolio-photos/background/3-mobile.jpg');
         
         
     }  
