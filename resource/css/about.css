@@ -500,7 +500,10 @@ font-size: 18px;
     align-items: center;
 }
 
-
+.about-text {
+    
+    text-align: justify;
+}
 .marquee-body {
     background-color: transparent;
             display: flex;
