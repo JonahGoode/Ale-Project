@@ -319,12 +319,12 @@ background-position: center;
 
 
 @keyframes imagechange {
-0% {background-image: url('../images/portfolio-photos/background/2.JPEG');}
-20% {background-image: url('../images/portfolio-photos/background/3.JPEG');}
-40% {background-image: url('../images/portfolio-photos/background/4.JPEG');}
-60% {background-image: url('../images/portfolio-photos/background/5.JPEG');}
-80% {background-image: url('../images/portfolio-photos/background/6.JPEG');}
-100% {background-image: url('../images/portfolio-photos/background/2.JPEG');}
+0% {background-image: url('../images/portfolio-photos/background/2-mobile.jpg');}
+20% {background-image: url('../images/portfolio-photos/background/3-mobile.jpg');}
+40% {background-image: url('../images/portfolio-photos/background/4-mobile.jpg');}
+60% {background-image: url('../images/portfolio-photos/background/5-mobile.jpg');}
+80% {background-image: url('../images/portfolio-photos/background/6-mobile.jpg');}
+100% {background-image: url('../images/portfolio-photos/background/2-mobile.jpg');}
 }
 .photo-slideshow li {
     list-style: none;
@@ -417,8 +417,7 @@ background-position: center;
         width: 90%;
         z-index: 1;
         background-color: #ffffffb4;
-        border-left: #cac9c9 2px solid;
-        border-left: #cac9c9 2px solid;
+        border: #cac9c9 2px solid;
         height: 100%;
        
     }
