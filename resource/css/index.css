@@ -253,3 +253,6 @@ body:has(a:hover) .Title h1,
 body:has(a:hover) .Title h2, body:has(a:hover) .Title h3 {
     color: black !important;
 }
+.description {
+    display: none;
+}
