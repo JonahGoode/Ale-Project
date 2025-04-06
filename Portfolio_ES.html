@@ -12,24 +12,43 @@
     <header>
         <nav class="navbar">
             <ul class="languages">
-                <li><a href="https://alejacalx.com/Portafolio">ESP</a></li>
+                <li><a href="https://alejacalx.com/Portfolio_ES">ESP</a></li>
                 <li><a href="https://alejacalx.com/Portfolio">ING</a></li>
             </ul>
             
             <div class="hover-enlarge Title">
-                <a href="https://alejacalx.com/Inicio" class="homepage-link">
+                <a href="https://alejacalx.com" class="homepage-link">
                 <h1 class="unselectable">AC</h1></a>
                 <h2 class="unselectable">alejandra cardenas</h2>
                 </div>
             <ul class="links">
-                <li><a href="https://alejacalx.com/Portafolio">Portafolio</a></li>
-                <li><a href="https://alejacalx.com/Acerca-De">Acerca De</a></li>
-                <li><a href="https://alejacalx.com/Contacto">Contacto</a></li>
+                <li><a href="https://alejacalx.com/Portfolio_ES">portfolio</a></li>
+                <li><a href="https://alejacalx.com/Acerca-De">acerca de</a></li>
+                <li><a href="https://alejacalx.com/Contacto">contacto</a></li>
             </ul>
         </nav>
     </header>
     <!-- Header End-->
     <section class="portfolio">
+        <div class="filter-container">
+            <p>Filtros:</p>    
+          <label>
+              <input type="checkbox" name="category" value="e-commerce">
+              <span>e-commerce</span>
+          </label>
+          <label>
+              <input type="checkbox" name="category" value="campaign">
+              <span>campaña</span>
+          </label>
+          <label>
+              <input type="checkbox" name="category" value="editorial">
+              <span>editorial</span>
+          </label>
+          <label>
+              <input type="checkbox" name="category" value="social">
+              <span>social</span>
+          </label>
+      </div>
         <div class = "gallery-container">
             <div class="gallery">
            
@@ -40,18 +59,16 @@
         <!-- Modal for expanded image and description -->
         <div id="modal" class="modal">
             <span id="close-modal" class="close-modal">&times;</span>
+            <div class="modal-nav modal-prev">&lt;</div>
             <div class ="modal-content">
                 <img id="modal-img" src="" alt="Expanded Image">
                 <div class="magnifier"></div> <!-- This will be the circle -->
                 <div class="modal-text">
                     <p id="modal-title"></p>
-                    <p id="modal-description"></p>
-                    <div class="checkbox">
-                        <input type="checkbox" id="bw-toggle" class="bw-toggle-btn"></input>
-                    </div>
                 </div>
                 
             </div>
+            <div class="modal-nav modal-next">&gt;</div>
         </div>
     </div>
             
@@ -73,6 +90,7 @@
     </footer>
     <script src="resource/js/portfolio_es.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   
     
 </body>
 </html>
