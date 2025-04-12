@@ -22,6 +22,14 @@
 
 
 }
+@font-face {
+    font-family: 'Urbanist';
+    src: url('../font/Urbanist/static/Urbanist-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+
+}
 
 nav {
     display: flex;
@@ -272,9 +280,9 @@ body {
     margin-top: 140px;
     display: flex;
     width: 100%;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
-    flex-direction: row;
+    flex-direction: row-reverse;
 
     flex: 1;
     height: 740px;
@@ -286,8 +294,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f5f5f5;
-    font-family: 'Brawler';
+    background-color: #ffffff;
+    font-family: 'Urbanist';
     font-weight: 200;
     width: 100%;
     min-height: 800px;
@@ -332,7 +340,7 @@ background-position: center;
 
 }
 .enquiries h1 {
-    font-size: 40px;
+    font-size: 4rem;
     font-weight: 500px;
     margin-bottom: 5px;
     transition: transform 0.3s;
@@ -340,7 +348,7 @@ background-position: center;
     
 }
 .enquiries h2 {
-    font-size: 25px;
+    font-size: 1.5rem;
     font-weight: 500px;
     margin-bottom: 50px;
     transition: transform 0.3s;
@@ -356,6 +364,7 @@ background-position: center;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 10px 0;
   }
 .email-link p, .insta-link p {
   margin-bottom: 20px; 
@@ -368,18 +377,19 @@ background-position: center;
 .email-link a, .insta-link a{
     padding: 10px;
     border-radius: 10px;
-    background: linear-gradient(#cac9c9,#cac9c9,#969595);
+   border: #000 1px solid;
     text-decoration: none;
     transition: all 0.7s; 
-    color: #494949;
+    color: #000;
     text-align: center;
   }
   .email-link a:hover, .insta-link a:hover{
-
-    background: linear-gradient(#8b8b8b,#8b8b8b,#555454);;
+    background-color: #000;
+    color: #fff;
+   
     text-decoration: none;
     transform: translateY(-10px);
-    color: #ffffff;
+   
   }
 .link-button {
     transition: transform 0.5s linear;
@@ -434,4 +444,36 @@ background-position: center;
         
     }  
   
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Different animation delays */
+.delay-1 {
+    animation-delay: 0.2s;
+}
+.delay-2 {
+    animation-delay: 0.4s;
+}
+.delay-3 {
+    animation-delay: 0.6s;
+}
+.delay-4 {
+    animation-delay: 0.8s;
+}
+.delay-5 {
+    animation-delay: 1s;
 }
