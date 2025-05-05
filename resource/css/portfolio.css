@@ -22,165 +22,200 @@
 
 
 }
+@font-face {
+    font-family: 'Urbanist';
+    src: url('../font/Urbanist/static/Urbanist-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 
-nav {
+
+}
+/* Burger Menu Styles */
+.burger-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+    cursor: pointer;
+}
+
+.burger {
+    width: 30px;
+    height: 20px;
+    position: relative;
+}
+
+.burger span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #000;
+    transition: all 0.3s ease;
+}
+
+.burger span:nth-child(1) { top: 0; }
+.burger span:nth-child(2) { top: 9px; }
+.burger span:nth-child(3) { top: 18px; }
+
+/* Burger Animation */
+.burger.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 9px;
+}
+
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 9px;
+}
+
+/* Sidebar Navigation */
+.nav-sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100vh;
+    background: #fff;
+    border-right: 1px solid #cac9c9;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-sidebar.active {
+    left: 0;
+}
+
+/* Nav Content Layout */
+/* Add these styles for the copyright section */
+.nav-content {
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    border-bottom: 1px solid #cac9c9;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    top: 0;
-    height: 140px;
+    justify-content: space-between; /* This ensures proper spacing */
 }
-.languages {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    position: absolute;
-    margin-left: auto;
-    right: 5px;
-    
+
+.copyright {
+    padding: 20px;
+    margin-top: auto; /* Pushes the copyright to the bottom */
 }
-.languages li {
-    list-style: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-end;
+
+.copyright p {
+    color: #cac9c9;
     font-size: 12px;
-    padding-top: 10px;
-    padding-right: 5px;
-    font-family: 'Ledger';
+    text-align: left;
+    margin: 0;
+    transition: color 0.3s ease;
+    font-family: "Brawler";
 }
-.Title h1 {
-        font-size: 45px;
-        color: #000000;
-        text-align: center;
-        margin: 0   ;
-        font-family: 'Cinzel';
-        font-weight: 500;
-        letter-spacing: -4px ;
-        transition: scale 0.3s;
-     }
-.Title h2 {
-        font-size: 20px;
-        color: #000000;
-        text-align: center;
-        margin-top: -8px;
-        font-family: 'Cinzel';
-        font-weight: 500;
-        margin-bottom: 30px;
-        cursor: default;
-    }
 
-.homepage-link {
-    text-decoration: none;
-    
-    border-bottom: none;
-    font-size: 45px;
-}
-.homepage-link a {
-    transition: scale 0.3s;
-}
-.Title h1:hover {
-    scale: 1.2;
-}
-.homepage-link:hover {
-    scale: 1.2;
-    
-}
-a {
-        transition: all 0.3s;
-        letter-spacing: 2px;
-    }
-.hover-enlarge {
-        transition: all 0.3s;
-    }    
-
-    
-
-.languages li a{
-   text-decoration: none;
-   color: #e7e7e7;
-   transition: color 0.3s;
-}
-.languages li a:hover {
+.copyright p:hover {
     color: #000;
 }
-   .languages li:not(:last-child)::after {
-    content: "/";
-    color: #e7e7e7;
-    margin: 0 5px;    
-    
-}
-nav a.site-logo {
-    display: inline-flex;
+
+/* Title Section (Upper Third) */
+.title-section {
+    flex: 0.7;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    scale: 0.45;
-    margin-bottom: -20px;
-    margin-top: -30px;
-    transition: scale 0.5s;
-    
+    padding-top: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-nav a.site-logo:hover {
-    scale: 0.5;
-   
+
+.title-section h1 {
+    font-size: 45px;
+    color: #000000;
+    margin: 0;
+    font-family: 'Cinzel';
+    font-weight: 500;
+    letter-spacing: -4px;
 }
-nav ul.links {
+
+.title-section h2 {
+    font-size: 20px;
+    color: #000000;
+    margin-top: -8px;
+    font-family: 'Cinzel';
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+/* Links Section (Middle Third) */
+.links {
+    flex: 1;
     display: flex;
-    width: 100%;
-    justify-content: space-around; 
-}
-nav ul.links li {
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;  
-    color: #cac9c9;
-    font-size: 14px;
-    padding: 0px 2px;
-    
-    
-}
-nav ul.links li a:hover {
-    
-    color: #000;
-    border-bottom: #000 1px solid;
-    
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-nav ul.links li a {
+.links li {
+    padding: 10px 20px;
+}
+
+.links a {
+    color: #838383;
     text-decoration: none;
-    color: #cac9c9;
-    border-bottom: #fff 1px solid;
-   font-family: "Cinzel";
-     
-    transition: color 0.3s;
-    transition: border-bottom 0.3s;
-    
-     
+    font-family: "Cinzel";
+    font-size: 1.5em;
+    transition: all 0.3s;
 }
-/* Media queries for responsive design */
-@media (max-width: 768px) {
-    nav ul.links li {
-        font-size: 12px; /* Smaller font size for tablets */
-    }
+.sublinks a {
+   
+    font-size: 1em;
+ 
 }
 
-@media (max-width: 480px) {
-    nav ul.links li {
-        font-size: 10px; /* Even smaller font size for mobile devices */
-    }
+.links a:hover {
+    color: #000;
+    transform: translateY(-10px);
 }
+.language-selector {
+    padding-left: 20px;
+    text-align: left;
+    margin-top: auto;
+}
+
+.language-selector a {
+    color: #cac9c9;
+    text-decoration: none;
+    font-family: "Ledger";
+    font-size: 12px;
+    transition: color 0.3s;
+}
+
+.language-selector span {
+    color: #cac9c9;
+    margin: 0 5px;
+}
+
+.language-selector a:hover {
+    color: #000;
+}
+
+.language-selector a.active {
+    color: #000;
+}
+
+
+
 /* ##########Banner End############################################################ */
 /* ##########Footer Start############################################################ */
 footer {
     background-color: #fff;
     border-top: 1px solid #cac9c9;
-    position: static;
-    bottom: 0;
+    margin-top: 20px;
+
     width: 100%;
     height: 50px;
     display: flex;
@@ -268,7 +303,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 140px;
+    
 }
 
 .gallery {
@@ -794,3 +829,52 @@ input[type=checkbox].bw-toggle-btn:hover {
     }
 }
 
+.page-title {
+    font-size: 30px;
+    color: #000000;
+    text-align: center;
+    margin: 0   ;
+    font-family: 'Cinzel';
+   padding-top: 20px; 
+   padding-bottom: 40px;
+   letter-spacing: 0.1em;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+    transition: all 0.3s;
+}
+.page-title h1 {
+    border-bottom: #000 1px solid;
+    transition: all 0.3s;
+    font-weight: 400;
+}
+
+
+.page-title h1:hover {
+    transform: translateY(-5px);
+}
+.logo {
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Cinzel";
+    margin: 0;
+    padding: 0 ;
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+.logo h1 {
+    font-size: 40px;
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: -4px;
+
+}

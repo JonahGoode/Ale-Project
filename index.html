@@ -8,27 +8,178 @@
     <title>Alejandra Cardenas | MUA</title>
     <link rel="stylesheet" href="resource/css/index.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+ 
 </head>
 <body>
-    <div class="background-container"></div>
+    <div class="background-slideshow" id="backgroundSlideshow">
+        <!-- Slides will be added here via JavaScript -->
+    </div>
     
- 
-<div class="Title"> 
-    <div class="hover-enlarge">
-    <h1 class="unselectable">AC</h1>
-    <h2 class="unselectable">Alejandra Cardenas</h2>
-    <h3 class="unselectable">international makeup artist and hair stylist</h3>
-
+    <!-- Add white overlay div -->
+    <div class="white-overlay" id="whiteOverlay"></div>
+    
+    <div class="Title" id="titleContainer"> 
+        <div class="hover-enlarge">
+            <h1 class="unselectable">AC</h1>
+            <h2 class="unselectable">Alejandra Cardenas</h2>
+            <h3 class="unselectable">international makeup artist and hair stylist</h3>
+        </div>
+        <a href="https://alejacalx.com/about" class="PC" id="enterLinkPC">Click Here To enter</a>
+        <a href="https://alejacalx.com/about" class="Mobile" id="enterLinkMobile">Tap Here To enter</a>
     </div>
-    <a href="https://alejacalx.com/Portfolio" class="PC">Click Here To Enter</a>
-    <a href="https://alejacalx.com/Portfolio" class="Mobile">Tap Here To Enter</a>
-    </div>
-    <div class="description">
+    <div class="description" id="descriptionContainer">
         <p class="unselectable">Alejandra Cardenas is a Madrid-based international makeup artist specializing in creating stunning looks for clients across Europe. Explore her portfolio and discover the art of beauty.</p>
     </div>
 
-
     <script src="resource/js/index.js"></script>
-  
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Device detection function
+            function detectDeviceType() {
+                const width = window.innerWidth;
+                
+                if (width >= 1025) {
+                    return 'desktop';
+                } else if (width >= 768) {
+                    return 'tablet';
+                } else {
+                    return 'mobile';
+                }
+            }
+            
+            // Different image sets for different devices
+            const deviceImages = {
+                desktop: [
+                    'resource/images/portfolio-photos/background/1-desktop.png',
+                    'resource/images/portfolio-photos/background/5-desktop.png',
+                   'resource/images/portfolio-photos/background/3-desktop.png',
+                    'resource/images/portfolio-photos/background/4-desktop.png',
+                    'resource/images/portfolio-photos/background/6-desktop.png',
+                    'resource/images/portfolio-photos/background/2-desktop.png'
+                ],
+                tablet: [
+                  'resource/images/portfolio-photos/background/1.webp',
+                  'resource/images/portfolio-photos/background/6.webp',
+                  'resource/images/portfolio-photos/background/5.webp',
+                  'resource/images/portfolio-photos/background/3.webp',
+                  'resource/images/portfolio-photos/background/7.webp',
+                  'resource/images/portfolio-photos/background/4.webp'
+                ],
+                
+                mobile: [
+                  'resource/images/portfolio-photos/background/1-mobile.webp',
+                  'resource/images/portfolio-photos/background/6-mobile.webp',
+                  'resource/images/portfolio-photos/background/8-mobile.webp',
+                  'resource/images/portfolio-photos/background/5-mobile.webp',
+                  'resource/images/portfolio-photos/background/3-mobile.webp',
+                  'resource/images/portfolio-photos/background/7-mobile.webp',
+                  'resource/images/portfolio-photos/background/4-mobile.webp'
+                ]
+            };
+            
+            // Detect current device type
+            const deviceType = detectDeviceType();
+            
+            // Select appropriate image set
+            const backgroundImages = deviceImages[deviceType];
+            
+            const slideshowContainer = document.getElementById('backgroundSlideshow');
+            let slides = [];
+            let currentSlideIndex = 0;
+            let slideshowInterval;
+            
+            // Preload images and create slide elements
+            function preloadImages() {
+                backgroundImages.forEach((imagePath, index) => {
+                    const slide = document.createElement('div');
+                    slide.className = 'background-slide';
+                    slide.style.backgroundImage = `url('${imagePath}')`;
+                    
+                    // Make the first slide active
+                    if (index === 0) {
+                        slide.classList.add('active');
+                    }
+                    
+                    slideshowContainer.appendChild(slide);
+                    slides.push(slide);
+                    
+                    // Preload image
+                    const img = new Image();
+                    img.src = imagePath;
+                });
+            }
+            
+            // Function to change slides
+            function changeSlide() {
+                // Remove active class from current slide
+                slides[currentSlideIndex].classList.remove('active');
+                
+                // Update index to next slide
+                currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+                
+                // Add active class to new current slide
+                slides[currentSlideIndex].classList.add('active');
+            }
+            
+            // Initialize slideshow
+            preloadImages();
+            
+            // Change slide every 4.5 seconds
+            slideshowInterval = setInterval(changeSlide, 4500);
+            
+            // Handle window resize - reload appropriate images if device type changes
+            let currentDeviceType = deviceType;
+            window.addEventListener('resize', function() {
+                const newDeviceType = detectDeviceType();
+                
+                // Only reload if device type has changed
+                if (newDeviceType !== currentDeviceType) {
+                    currentDeviceType = newDeviceType;
+                    
+                    // Clear existing slides
+                    slideshowContainer.innerHTML = '';
+                    slides = [];
+                    currentSlideIndex = 0;
+                    
+                    // Load new image set
+                    const backgroundImages = deviceImages[newDeviceType];
+                    preloadImages();
+                }
+            });
+            
+            // Handle click on enter links
+            const pcLink = document.getElementById('enterLinkPC');
+            const mobileLink = document.getElementById('enterLinkMobile');
+            const whiteOverlay = document.getElementById('whiteOverlay');
+            const titleContainer = document.getElementById('titleContainer');
+            const descriptionContainer = document.getElementById('descriptionContainer');
+            
+            function handleEnterClick(e) {
+                e.preventDefault(); // Prevent immediate navigation
+                
+                // Add transition-active class to prevent multiple clicks
+                document.body.classList.add('transition-active');
+                
+                // Stop the slideshow
+                clearInterval(slideshowInterval);
+                
+                // Fade in white overlay
+                whiteOverlay.classList.add('active');
+                
+                // Change text color to black
+                titleContainer.classList.add('text-black');
+                descriptionContainer.classList.add('text-black');
+                
+                // Navigate to the link after transition completes
+                setTimeout(function() {
+                    window.location.href = e.target.href;
+                }, 1000); // Match this to the transition duration
+            }
+            
+            pcLink.addEventListener('click', handleEnterClick);
+            mobileLink.addEventListener('click', handleEnterClick);
+        });
+    </script>
 </body>
 </html>
+

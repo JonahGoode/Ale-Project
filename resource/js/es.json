@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "title": {
+      "main": "AC",
+      "sub": "alejandra cardenas"
+    },
+    "menu": {
+      "portfolio": "portfolio",
+      "subMenu": {
+        "ecommerce": "E-commerce",
+        "campaign": "Campaña",
+        "editorial": "Editorial",
+        "social": "Social"
+      },
+      "about": "sobre mí",
+      "contact": "contacto"
+    }
+  },
+  "language": {
+    "english": "ENG",
+    "spanish": "ESP",
+    "french": "FRA",
+    "german": "DEU"
+  },
+  "page": {
+    "campaign": {
+      "title": "campaña",
+      "logo": "AC"
+    },
+    "editorial": {
+      "title": "editorial",
+      "logo": "AC"
+    },
+    "social": {
+      "title": "social",
+      "logo": "AC"
+    },
+    "ecommerce": {
+      "title": "e-commerce",
+      "logo": "AC"
+    },
+    "about": {
+      "greeting": "¡Hola!",
+      "introduction": "Soy Alejandra",
+      "bio": "Alejandra Cárdenas es una maquilladora profesional altamente cualificada y apasionada con sede en Madrid, originaria de Bogotá, Colombia. Con años de experiencia en la industria de la belleza, ha trabajado con una amplia gama de clientes destacados, desde personas de alto perfil hasta proyectos editoriales y comerciales.\n\nAlejandra perfeccionó su oficio en la prestigiosa Escuela de Maquillaje Kohl en Madrid, donde refinó sus técnicas y desarrolló un ojo minucioso para los detalles. Su experiencia abarca diversos estilos de maquillaje, incluyendo belleza, moda, editorial y eventos especiales. Ya sea creando looks naturales impecables o transformaciones artísticas audaces, aporta creatividad, precisión y profesionalismo a cada proyecto.\n\nDomina tanto el español como el inglés, lo que le permite colaborar sin problemas con clientes y equipos internacionales. Su dedicación para realzar la belleza natural y su capacidad para adaptarse a diferentes estilos la convierten en una artista muy solicitada en la industria.\n\nPara reservas y consultas, no dudes en contactarme y permite que Alejandra dé vida a tu visión.",
+      "clients": {
+        "title": "he trabajado con:"
+      },
+      "testimonials": {
+        "title": "Testimonios",
+        "items": [
+          {
+            "quote": "Alejandra es una verdadera artista. Su atención al detalle y creatividad son incomparables. Es un placer trabajar con ella y siempre entrega resultados excepcionales.",
+            "author": "- Jane Doe, Modelo"
+          }
+        ]
+      }
+    },
+    "contact": {
+  "title": "¿Interesado en los servicios de Alejandra?",
+  "sub-title": "Contáctanos por correo electrónico o Instagram",
+  "email": {
+    "label": "Para todas las consultas, por favor contacta:",
+    "address": "makeupalejacalx@hotmail.com"
+  },
+  "instagram": {
+    "label": "O alternativamente, envía un mensaje directo:",
+    "address": "@makeupalejacalx"
+  }
+}
+
+  },
+  "footer": {
+    "copyright": "© 2025 por Jonah Goode. Todos los derechos reservados.",
+    "social": {
+      "email": {
+        "alt": "Correo",
+        "address": "makeupalejacalx@hotmail.com"
+      },
+      "instagram": {
+        "alt": "Instagram",
+        "username": "makeupalejacalx"
+      }
+    }
+  },
+  "modal": {
+    "close": "×",
+    "navigation": {
+      "prev": "<",
+      "next": ">"
+    },
+    "instruction": {
+      "mobile": "Desliza sobre la imagen para ampliar",
+      "desktop": "Pasa el cursor sobre la imagen para ampliar"
+    }
+  },
+  "accessibility": {
+    "burgerMenu": "Alternar menú de navegación",
+    "modalClose": "Cerrar imagen",
+    "modalPrev": "Imagen anterior",
+    "modalNext": "Siguiente imagen"
+  }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alejandra Cardenas | MUA | Portfolio</title>
+    <link rel="stylesheet" href="resource/css/portfolio.css">
+    <link rel="icon" type="image/x-icon" href="favicon.PNG">
+</head>
+<body>
+    <!-- Header Start-->
+ <header>
+     <div class="burger-menu">
+         <div class="burger">
+             <span></span>
+             <span></span>
+             <span></span>
+         </div>
+     </div>
+     
+     <div class="nav-sidebar">
+         <div class="nav-content">
+             <div class="title-section">
+                 <h1 class="unselectable" data-translate="nav.title.main">AC</h1>
+                 <h2 class="unselectable" data-translate="nav.title.sub">alejandra cardenas</h2>
+             </div>
+             
+             <ul class="links">
+                 <li class="dropdown-trigger">
+                     <a href="#" class="portfolio-link" data-translate="nav.menu.portfolio">portfolio</a>
+                     <ul class="dropdown-menu sublinks">
+                         <li><a href="https://alejacalx.com/e-commerce" data-translate="nav.menu.subMenu.ecommerce">E-commerce</a></li>
+                         <li><a href="https://alejacalx.com/campaign" data-translate="nav.menu.subMenu.campaign">Campaign</a></li>
+                         <li><a href="https://alejacalx.com/editorial" data-translate="nav.menu.subMenu.editorial">Editorial</a></li>
+                         <li><a href="https://alejacalx.com/social" data-translate="nav.menu.subMenu.social">Social</a></li>
+                     </ul>
+                 </li>
+                 <li><a href="https://alejacalx.com/About" data-translate="nav.menu.about">about</a></li>
+                 <li><a href="https://alejacalx.com/Contact" data-translate="nav.menu.contact">contact</a></li>
+             </ul>
+             <div class="language-selector">
+                 <a href="#" data-lang="en" class="lang-option" data-translate="language.english">ENG</a>
+                 <span>/</span>
+                 <a href="#" data-lang="es" class="lang-option" data-translate="language.spanish">ESP</a>
+                    <span>/</span>
+             <a href="#" data-lang="fr" class="lang-option" data-translate="language.french">FR</a>
+                    <span>/</span>
+             <a href="#" data-lang="de" class="lang-option" data-translate="language.german">DEU</a>
+            </div>
+             <div class="copyright">
+                 <p data-translate="footer.copyright">&copy; 2025 by Jonah Goode. All rights reserved.</p>
+             </div>
+         </div>
+     </div>
+ </header>
+ 
+ <!-- Header End-->
+ <section class="portfolio">
+     <div class="logo">
+         <h1 data-translate="page.campaign.logo">AC</h1>
+     </div>
+     
+     <div class="page-title"> 
+         <h1 data-translate="page.campaign.title">campaign</h1>
+     </div>    
+     
+     <div class="gallery-container">
+         <div class="gallery">
+         </div>
+     </div>
+     <!-- Modal for expanded image and description -->
+     <div id="modal" class="modal">
+         <span id="close-modal" class="close-modal" data-translate="modal.close">&times;</span>
+         <div class="modal-nav modal-prev" data-translate="modal.navigation.prev">&lt;</div>
+         <div class="modal-content">
+             <img id="modal-img" src="" alt="Expanded Image">
+             <div class="magnifier"></div>
+             <div class="modal-text">
+                 <p id="modal-title"></p>
+             </div>
+         </div>
+         <div class="modal-nav modal-next" data-translate="modal.navigation.next">&gt;</div>
+     </div>
+ </section>
+ 
+ <footer class="footer">
+     <section class="rights">
+         <p data-translate="footer.copyright">&copy; 2025 Goode Design. All rights reserved.</p>
+     </section>
+
+ 
+        <section class="social-links">
+            <ul>
+
+            
+                <li><a id="facebook" href="mailto:makeupalejacalx@hotmail.com"><img class="facebook" src="resource/images/Mail unhover.png" alt="Mail"></a></li>
+            <li><a id="instagram" href="https://www.instagram.com/makeupalejacalx"><img class="instagram"src="resource/images/Instagram Logo Unhover.png" alt="Instagram"></a></li>
+            
+        </ul>
+        </section>
+        
+    </footer>
+    <script src="resource/js/campaign.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const burger = document.querySelector('.burger');
+            const navSidebar = document.querySelector('.nav-sidebar');
+            const portfolioLink = document.querySelector('.portfolio-link');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            
+            // Toggle burger menu and sidebar
+            burger.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navSidebar.classList.toggle('active');
+            });
+        
+            // Toggle dropdown
+            portfolioLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                dropdownMenu.classList.toggle('active');
+                
+                // Add delay to each dropdown item
+                const dropdownItems = dropdownMenu.querySelectorAll('li');
+                dropdownItems.forEach((item, index) => {
+                    item.style.transitionDelay = `${index * 0.1}s`;
+                });
+            });
+        
+            // Close sidebar when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!navSidebar.contains(e.target) && !burger.contains(e.target)) {
+                    burger.classList.remove('active');
+                    navSidebar.classList.remove('active');
+                }
+            });
+        });
+        
+      </script>
+      <script src="resource/js/language-switch.js"></script>
+    
+</body>
+</html>

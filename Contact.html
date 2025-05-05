@@ -13,40 +13,55 @@
 <!-- Header Start-->
 <header>
     <nav class="navbar">
-        <ul class="languages">
-            <li><a href="https://alejacalx.com/Contacto">ESP</a></li>
-            <li><a href="https://alejacalx.com/Contact">ENG</a></li>
-        </ul>
-        
-        <div class="hover-enlarge Title">
-            <a href="https://alejacalx.com" class="homepage-link">
-            <h1 class="unselectable">AC</h1></a>
-            <h2 class="unselectable">alejandra cardenas</h2>
-            </div>
-        <ul class="links">
-            <li><a href="https://alejacalx.com/Portfolio">portfolio</a></li>
-            <li><a href="https://alejacalx.com/About">about</a></li>
-            <li><a href="https://alejacalx.com/Contact">contact</a></li>
-        </ul>
-    </nav>
+       <div class="language-selector">
+           <a href="#" data-lang="en" class="lang-option" data-translate="language.english">ENG</a>
+           <span>/</span>
+           <a href="#" data-lang="es" class="lang-option" data-translate="language.spanish">ESP</a>
+           <span>/</span>
+           <a href="#" data-lang="fr" class="lang-option" data-translate="language.french">FRA</a>
+           <span>/</span>
+           <a href="#" data-lang="de" class="lang-option" data-translate="language.german">DEU</a>
+       </div>
+       
+       <div class="hover-enlarge Title">
+           <a href="https://alejacalx.com" class="homepage-link">
+               <h1 class="unselectable" data-translate="nav.title.main">AC</h1>
+           </a>
+           <h2 class="unselectable" data-translate="nav.title.sub">alejandra cardenas</h2>
+       </div>
+      
+       <ul class="links">
+           <li class="portfolio-dropdown">
+               <a href="#" class="portfolio-trigger" data-translate="nav.menu.portfolio">portfolio</a>
+               <ul class="dropdown-menu">
+                   <li><a href="https://alejacalx.com/Portfolio/campaign" data-translate="nav.menu.subMenu.campaign">campaign</a></li>
+                   <li><a href="https://alejacalx.com/Portfolio/editorial" data-translate="nav.menu.subMenu.editorial">editorial</a></li>
+                   <li><a href="https://alejacalx.com/Portfolio/e-commerce" data-translate="nav.menu.subMenu.ecommerce">e-commerce</a></li>
+                   <li><a href="https://alejacalx.com/Portfolio/social" data-translate="nav.menu.subMenu.social">social</a></li>
+               </ul>
+           </li>
+           <li><a href="https://alejacalx.com/About" data-translate="nav.menu.about">about</a></li>
+           <li><a href="https://alejacalx.com/Contact" data-translate="nav.menu.contact">contact</a></li>
+       </ul>
+   </nav>
 </header>
 <!-- Header End-->
 <main class="main-content">
 <div class="contact">
     <div class="enquiries fade-in">
-        <h1 class="fade-in delay-2">Interested in Alejandra's Services?</h1>
-        <h2 class="fade-in delay-3">Reach out via Email or Instagram</h2>
+        <h1 data-translate="page.contact.title" class="fade-in delay-2">Interested in Alejandra's Services?</h1>
+        <h2 data-translate="page.contact.sub-title" class="fade-in delay-3">Reach out via Email or Instagram</h2>
         <div class="contact-links">
             <div class="email-link fade-in delay-4 ">
-                <p>For all inquiries, please contact:</p>
+                <p data-translate="page.contact.email.label">For all inquiries, please contact:</p>
                 <div class ='link-button'>
-                <a href="mailto:makeupalejacalx@hotmail.com">makeupalejacalx@hotmail.com</a>
+                <a  data-translate="page.contact.email.address" href="mailto:makeupalejacalx@hotmail.com">makeupalejacalx@hotmail.com</a>
             </div>
         </div>
             <div class="insta-link fade-in delay-5">
-            <p>Or alternatively, please direct message:</p>
+            <p data-translate="page.contact.instagram.label" >Or alternatively, please direct message:</p>
             <div class ='link-button'>
-            <a href="https://www.instagram.com/makeupalejacalx">@makeupalejacalx</a>
+            <a data-translate="page.contact.instagram.address" href="https://www.instagram.com/makeupalejacalx">@makeupalejacalx</a>
             </div>
             </div>
         </div>
@@ -77,7 +92,7 @@
  <!-- Footer Start-->
  <footer class="footer">
     <section class="rights">
-        <p>&copy; 2025 Goode Design. All rights reserved.</p>
+        <p data-translate="footer.copyright">&copy; 2025 Goode Design. All rights reserved.</p>
     </section>
     <section class="social-links">
         <ul>
@@ -91,5 +106,74 @@
     
 </footer>
 <!-- Footer End-->
+
+     <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const portfolioTrigger = document.querySelector('.portfolio-trigger');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        
+        // Toggle dropdown on click
+        portfolioTrigger.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Toggle active class on trigger for arrow rotation
+            this.classList.toggle('active');
+            
+            // Toggle dropdown visibility
+            dropdownMenu.classList.toggle('active');
+        });
+    
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!portfolioTrigger.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.classList.remove('active');
+                portfolioTrigger.classList.remove('active');
+            }
+        });
+    
+        // Prevent dropdown from closing when clicking inside it
+        dropdownMenu.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    
+        // Add keyboard navigation
+        dropdownMenu.querySelectorAll('a').forEach((link, index, links) => {
+            link.addEventListener('keydown', function(e) {
+                let targetItem;
+                
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    targetItem = links[index + 1] || links[0];
+                }
+                
+                if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    targetItem = links[index - 1] || links[links.length - 1];
+                }
+                
+                if (e.key === 'Escape') {
+                    portfolioTrigger.focus();
+                    dropdownMenu.classList.remove('active');
+                    portfolioTrigger.classList.remove('active');
+                }
+                
+                targetItem?.focus();
+            });
+        });
+    
+        // Close dropdown on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                dropdownMenu.classList.remove('active');
+                portfolioTrigger.classList.remove('active');
+            }
+        });
+    });
+    
+
+     </script>
+     <script src="resource/js/language-switch.js"></script>
+
 </body>
 </html>

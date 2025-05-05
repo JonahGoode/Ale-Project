@@ -9,49 +9,57 @@
 </head>
 <body>
      <!-- Header Start-->
-     <header>
-        <nav class="navbar">
-            <ul class="languages">
-                <li><a href="https://alejacalx.com/Acerca-De">ESP</a></li>
-                <li><a href="https://alejacalx.com/About">ENG</a></li>
-            </ul>
-            
-            <div class="hover-enlarge Title">
-                <a href="https://alejacalx.com" class="homepage-link">
-                <h1 class="unselectable">AC</h1></a>
-                <h2 class="unselectable">alejandra cardenas</h2>
-                </div>
-            <ul class="links">
-                <li><a href="https://alejacalx.com/Portfolio">portfolio</a></li>
-                <li><a href="https://alejacalx.com/About">about</a></li>
-                <li><a href="https://alejacalx.com/Contact">contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Header End-->
-     <!-- Main Start-->
-     <main class="main-content">
-        <section class="fade-in about">
-            <div class="about-image fade-in delay-4">   
-                <img src="resource/images/Makeup test.PNG" alt="Alejandra Cardenas">
-                </div> 
-            <div class="about-text">
-                <div class="about-title">
-            <h1 class="hi fade-in delay-1">Hi!</h1>
-            <h1 class="im fade-in delay-2">I'm Alejandra</h1>
+    <header>
+     <nav class="navbar">
+        <div class="language-selector">
+            <a href="#" data-lang="en" class="lang-option" data-translate="language.english">ENG</a>
+            <span>/</span>
+            <a href="#" data-lang="es" class="lang-option" data-translate="language.spanish">ESP</a>
+            <span>/</span>
+            <a href="#" data-lang="fr" class="lang-option" data-translate="language.french">FRA</a>
+            <span>/</span>
+            <a href="#" data-lang="de" class="lang-option" data-translate="language.german">DEU</a>
         </div>
-            <p class="fade-in delay-3">Alejandra Cárdenas is a highly skilled and passionate makeup artist based in Madrid, originally from Bogotá, Colombia. With years of experience in the beauty industry, she has worked with a diverse range of notable clients, from high-profile individuals to editorial and commercial projects.
-            
-                <br><br>Alejandra honed her craft at the prestigious Kohl School of Makeup in Madrid, where she refined her techniques and developed a keen eye for detail. Her expertise spans across various makeup styles, including beauty, fashion, editorial, and special events. Whether creating flawless, natural looks or bold, artistic transformations, she brings creativity, precision, and professionalism to every project.
-                
-               <br><br> Fluent in both Spanish and English, Alejandra seamlessly collaborates with international clients and teams. Her dedication to enhancing natural beauty and her ability to adapt to different styles make her a sought-after artist in the industry.
-                
-                <br><br>For bookings and inquiries, feel free to reach out and let Alejandra bring your vision to life.</p>
+        
+        <div class="hover-enlarge Title">
+            <a href="https://alejacalx.com" class="homepage-link">
+                <h1 class="unselectable" data-translate="nav.title.main">AC</h1>
+            </a>
+            <h2 class="unselectable" data-translate="nav.title.sub">alejandra cardenas</h2>
+        </div>
+       
+        <ul class="links">
+            <li class="portfolio-dropdown">
+                <a href="#" class="portfolio-trigger" data-translate="nav.menu.portfolio">portfolio</a>
+                <ul class="dropdown-menu">
+                    <li><a href="https://alejacalx.com/Portfolio/campaign" data-translate="nav.menu.subMenu.campaign">campaign</a></li>
+                    <li><a href="https://alejacalx.com/Portfolio/editorial" data-translate="nav.menu.subMenu.editorial">editorial</a></li>
+                    <li><a href="https://alejacalx.com/Portfolio/e-commerce" data-translate="nav.menu.subMenu.ecommerce">e-commerce</a></li>
+                    <li><a href="https://alejacalx.com/Portfolio/social" data-translate="nav.menu.subMenu.social">social</a></li>
+                </ul>
+            </li>
+            <li><a href="https://alejacalx.com/About" data-translate="nav.menu.about">about</a></li>
+            <li><a href="https://alejacalx.com/Contact" data-translate="nav.menu.contact">contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main-content">
+    <section class="fade-in about">
+        <div class="about-image fade-in delay-4">   
+            <img src="resource/images/Makeup test.PNG" alt="Alejandra Cardenas">
+        </div> 
+        <div class="about-text">
+            <div class="about-title">
+                <h1 class="hi fade-in delay-1" data-translate="page.about.greeting">Hi!</h1>
+                <h1 class="im fade-in delay-2" data-translate="page.about.introduction">I'm Alejandra</h1>
             </div>
-            
-        </section>
-        <div class="Notable-Clients fade-in delay-5">
-            <h2>i've worked with:</h2>
+            <p class="fade-in delay-3" data-translate="page.about.bio"><!-- Bio text --></p>
+        </div>
+    </section>
+
+    <div class="Notable-Clients fade-in delay-5">
+        <h2 data-translate="page.about.clients.title">i've worked with:</h2>
             <div class="gradient-overlay left"></div>
             <div class="marquee-body">
                 
@@ -83,34 +91,33 @@
         </div>
         </section>
         <section class="testimonials-container fade-in delay-5">
-            <h2>Testimonials</h2>
+            <h2 data-translate="page.about.testimonials.title">Testimonials</h2>
             <div class="testimonials">
                 <div class="testimonial">
-                    <p>"Alejandra is a true artist. Her attention to detail and creativity are unmatched. She is a pleasure to work with and always delivers exceptional results."</p>
-                    <p class="author">- Jane Doe, Model</p>
+                    <p data-translate="page.about.testimonials.items.0.quote"><!-- Quote text --></p>
+                    <p class="author" data-translate="page.about.testimonials.items.0.author"><!-- Author text --></p>
                 </div>
                 <div class="testimonial">
-                    <p>"Alejandra is a true artist. Her attention to detail and creativity are unmatched. She is a pleasure to work with and always delivers exceptional results."</p>
-                    <p class="author">- Jane Doe, Model</p>
+                    <p data-translate="page.about.testimonials.items.1.quote"><!-- Quote text --></p>
+                    <p class="author" data-translate="page.about.testimonials.items.1.author"><!-- Author text --></p>
                 </div>
                 <div class="testimonial">
-                    <p>"Alejandra is a true artist. Her attention to detail and creativity are unmatched. She is a pleasure to work with and always delivers exceptional results."</p>
-                    <p class="author">- Jane Doe, Model</p>
+                    <p data-translate="page.about.testimonials.items.2.quote"><!-- Quote text --></p>
+                    <p class="author" data-translate="page.about.testimonials.items.2.author"><!-- Author text --></p>
                 </div>
                 <div class="testimonial">
-                    <p>"Alejandra is a true artist. Her attention to detail and creativity are unmatched. She is a pleasure to work with and always delivers exceptional results."</p>
-                    <p class="author">- Jane Doe, Model</p>
+                    <p data-translate="page.about.testimonials.items.3.quote"><!-- Quote text --></p>
+                    <p class="author" data-translate="page.about.testimonials.items.3.author"><!-- Author text --></p>
                 </div>
                 <div class="testimonial">
-                    <p>"Alejandra is a true artist. Her attention to detail and creativity are unmatched. She is a pleasure to work with and always delivers exceptional results."</p>
-                    <p class="author">- Jane Doe, Model</p>
+                    <p data-translate="page.about.testimonials.items.4.quote"><!-- Quote text --></p>
+                    <p class="author" data-translate="page.about.testimonials.items.4.author"><!-- Author text --></p>
                 </div>
                 <div class="testimonial">
-                    <p>"Alejandra is a true artist. Her attention to detail and creativity are unmatched. She is a pleasure to work with and always delivers exceptional results."</p>
-                    <p class="author">- Jane Doe, Model</p>
+                    <p data-translate="page.about.testimonials.items.5.quote"><!-- Quote text --></p>
+                    <p class="author" data-translate="page.about.testimonials.items.5.author"><!-- Author text --></p>
                 </div>
             </div>
-            
         </section>
     </main>
     
@@ -118,19 +125,86 @@
     <!-- Footer Start-->
     <footer class="footer">
         <section class="rights">
-            <p>&copy; 2025 Goode Design. All rights reserved.</p>
+            <p data-translate="footer.copyright">© 2025 Goode Design. All rights reserved.</p>
         </section>
         <section class="social-links">
             <ul>
-
-            
-                <li><a id="facebook" href="mailto:makeupalejacalx@hotmail.com"><img class="facebook" src="resource/images/Mail unhover.png" alt="Mail"></a></li>
-            <li><a id="instagram" href="https://www.instagram.com/makeupalejacalx"><img class="instagram"src="resource/images/Instagram Logo Unhover.png" alt="Instagram"></a></li>
-            
-        </ul>
+                <li><a id="facebook" href="mailto:makeupalejacalx@hotmail.com">
+                    <img class="facebook" src="resource/images/Mail unhover.png" data-translate="footer.social.email.alt" alt="Mail">
+                </a></li>
+                <li><a id="instagram" href="https://www.instagram.com/makeupalejacalx">
+                    <img class="instagram" src="resource/images/Instagram Logo Unhover.png" data-translate="footer.social.instagram.alt" alt="Instagram">
+                </a></li>
+            </ul>
         </section>
-        
     </footer>
     <!-- Footer End-->
+     <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const portfolioTrigger = document.querySelector('.portfolio-trigger');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        
+        // Toggle dropdown on click
+        portfolioTrigger.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Toggle active class on trigger for arrow rotation
+            this.classList.toggle('active');
+            
+            // Toggle dropdown visibility
+            dropdownMenu.classList.toggle('active');
+        });
+    
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!portfolioTrigger.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.classList.remove('active');
+                portfolioTrigger.classList.remove('active');
+            }
+        });
+    
+        // Prevent dropdown from closing when clicking inside it
+        dropdownMenu.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    
+        // Add keyboard navigation
+        dropdownMenu.querySelectorAll('a').forEach((link, index, links) => {
+            link.addEventListener('keydown', function(e) {
+                let targetItem;
+                
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    targetItem = links[index + 1] || links[0];
+                }
+                
+                if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    targetItem = links[index - 1] || links[links.length - 1];
+                }
+                
+                if (e.key === 'Escape') {
+                    portfolioTrigger.focus();
+                    dropdownMenu.classList.remove('active');
+                    portfolioTrigger.classList.remove('active');
+                }
+                
+                targetItem?.focus();
+            });
+        });
+    
+        // Close dropdown on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                dropdownMenu.classList.remove('active');
+                portfolioTrigger.classList.remove('active');
+            }
+        });
+    });
+    
+
+     </script>
+     <script src="resource/js/language-switch.js"></script>
 </body>
 </html>
