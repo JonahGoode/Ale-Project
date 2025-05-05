@@ -187,7 +187,7 @@ nav ul.links li a:hover {
 
 .dropdown-menu {
     position: absolute;
-    top: 100%;
+    top: 122%;
     left: 50%;
     transform: translateX(-50%) scaleY(0);
     background: white;
@@ -247,6 +247,9 @@ a {
 @media (max-width: 768px) {
     nav ul.links li {
         font-size: 12px;
+    }
+    .dropdown-menu {
+        top: 150%;
     }
 }
 

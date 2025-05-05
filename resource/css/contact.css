@@ -187,7 +187,7 @@ nav ul.links li a:hover {
 
 .dropdown-menu {
     position: absolute;
-    top: 100%;
+    top: 122%;
     left: 50%;
     transform: translateX(-50%) scaleY(0);
     background: white;
@@ -220,7 +220,7 @@ nav ul.links li a:hover {
 .dropdown-menu a {
     display: block;
     padding: 0.8rem 1.5rem;
-    text-align: left;
+    text-align: center;
     color: #000;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -247,6 +247,9 @@ a {
 @media (max-width: 768px) {
     nav ul.links li {
         font-size: 12px;
+    }
+    .dropdown-menu {
+        top: 150%;
     }
 }
 
@@ -431,7 +434,7 @@ background-position: center;
 .email-link, .insta-link {
     margin-bottom: 30px;
     transition: all 0.3s ease;
-    font-size: 1em;
+    
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -446,7 +449,7 @@ background-position: center;
     margin-bottom: 20px;
     transition: transform 0.3s;
     text-align: center;
-    font-size: 18px;
+    
     font-family: 'Urbanist', sans-serif;
     font-weight: 300;
     color: #000000;
@@ -463,6 +466,7 @@ background-position: center;
     letter-spacing: 1px;
     position: relative;
     overflow: hidden;
+    font-size: 0.8rem;
 }
 
 .email-link a:hover, .insta-link a:hover {
@@ -529,14 +533,26 @@ background-position: center;
         position: relative;
     }
     .enquiries h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-weight: 500px;
         margin-bottom: 5px;
         transition: transform 0.3s;
         text-align: center;
+        text-wrap: wrap;
+
+    }
+    .enquiries h2 {
+        font-size: 1rem;
+        font-weight: 300px;
+        
+        transition: transform 0.3s;
+        text-align: center;
+        text-wrap: normal;
+        width: 85%;
+
     }
     .enquiries p {
-        font-size: 1rem;
+        font-size: 0.8rem;
         font-weight: 500px;
        
         transition: transform 0.3s;
@@ -569,6 +585,7 @@ background-position: center;
         
         
     }  
+   
   
 }
 @keyframes fadeIn {
