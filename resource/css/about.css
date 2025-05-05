@@ -1427,3 +1427,7 @@ font-size: 18px;
 @media screen and (min-width: 1201px) {
     /* Your extra large screen styles here */
 }
+
+.testimonials-container {
+    display: none; /*temporarily hide while accumulating reviews*/
+}
