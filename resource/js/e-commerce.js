@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", async function () {
     const gallery = document.querySelector(".gallery");
-    const imageBaseUrl = "/resource/images/E-commerce/";
+    const imageBaseUrl = "/resource/images/E-Commce/";
     const jsonUrl = "resource/js/e-commerce.json";
     const maxAttempts = 1000;
     const imagesPerPage = 30;
