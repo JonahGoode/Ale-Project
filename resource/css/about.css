@@ -493,6 +493,7 @@ font-size: 18px;
         }
         .marquee {
             display: flex;
+            justify-content: space-around;
             gap: 90px;
             animation: scroll 30s linear infinite;
         }
@@ -536,6 +537,26 @@ font-size: 18px;
         }
         .marquee-tinta {
             height: 110px!important;
+        }
+        .marquee-canva {
+            height: 50px!important;
+            filter: grayscale() ;
+          
+        }
+        .marquee-kohl {
+            
+   
+        }
+        .marquee-sach {
+            height: 150px!important;
+            margin: 0 80px;
+            padding-right: 100px;
+            filter: grayscale();
+        }
+        .marquee-grassy {
+            height: 150px!important;
+            
+            filter: grayscale();
         }
 
 
@@ -793,7 +814,7 @@ font-size: 18px;
             }
             .marquee {
                 display: flex;
-                gap: 20px;
+                gap: 40px;
                 animation: scroll 20s linear infinite;
             }
             .marquee img {
@@ -836,6 +857,12 @@ font-size: 18px;
             }
             .marquee-tinta {
                 height: 110px!important;
+            }
+            .marquee-sach {
+                height: 150px!important;
+                margin: 0 30px;
+                padding-right: 40px;
+                filter: grayscale();
             }
     
     
