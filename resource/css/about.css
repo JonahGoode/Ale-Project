@@ -398,7 +398,7 @@ h1.im {
 }
 .about-image {
 display: flex;
-width: 30%;
+width: 40%;
 height: 100%;
 overflow: hidden;
 }
@@ -815,7 +815,7 @@ font-size: 18px;
             .marquee {
                 display: flex;
                 gap: 40px;
-                animation: scroll 20s linear infinite;
+                animation: scroll 30s linear infinite;
             }
             .marquee img {
                 height: 40px;
@@ -1080,7 +1080,7 @@ font-size: 18px;
             .marquee {
                 display: flex;
                 gap: 20px;
-                animation: scroll 20s linear infinite;
+                animation: scroll 30s linear infinite;
             }
             .marquee img {
                 height: 40px;
@@ -1336,7 +1336,7 @@ font-size: 18px;
             .marquee {
                 display: flex;
                 gap: 40px;
-                animation: scroll 20s linear infinite;
+                animation: scroll 30s linear infinite;
             }
             .marquee img {
                 height: 40px;
